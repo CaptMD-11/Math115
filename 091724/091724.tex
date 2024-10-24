@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\usepackage{amsmath, fullpage}
+
+\begin{document}
+
+\title{Math 115 Lecture Notes (Prof. Paul Vojta)}
+\author{Vignesh Nydhruva}
+\date{September 17, 2024}
+\maketitle
+\thispagestyle{empty}
+
+For this lecture, the following topics were covered: multiplicative inverses $\mod m$, theorems of Euler and Wilson, and solutions of the congruence $x^2 \equiv -1 \pmod{m}$ for prime $p$. The reading for the following lecture is $\S 2.3$ and 2.4 from Niven. In addition, for today, $m \in \mathbb{Z}_{>0}$. 
+
+\begin{theorem}
+    Let $a \in \mathbb{Z}$. Then there exists an $x \in \mathbb{Z}$ such that $ax \equiv 1 \pmod{m}$ iff $\gcd(a,m) = 1$. 
+
+    \begin{proof}
+        \begin{align*}
+            \gcd(a,m) = 1 *\iff $\exists x,y \in \mathbb{Z}$ such that $xa + ym = 1$. \\
+            $*\iff \exists x \in \mathbb{Zs}$
+        \end{align*}
+        
+    \end{proof}
+\end{theorem}
+
+
+\end{document}

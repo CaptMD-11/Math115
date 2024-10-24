@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\begin{document}
+\title{Math 115 - Midterm 1 Definitions}
+\author{}
+\date{}
+\maketitle
+\date
+
+\noindent The product of sets $A \times B$ is the Cartesian product of the sets, where $A \times B = \{(a,b) \mid a \in A, b \in B\}$. 
+\\
+\\
+A relation on a set $A$ is a subset of $A \times A$. Elaborately, a relation on a set $A$ takes two values from $A$ and puts them into a class based on how they are compared. 
+\\
+\\
+A relation is reflexive if for any $a \in A$, $aRa$, symmetric if $aRb \implies bRa$, and transitive if $aRb \land bRc \implies aRc$, where $b,c \in A$. 
+\\
+\\
+A relation on a set $A$ is an equivalence relation if it is reflexive, symmetric, and transitive. An equivalence class of an element $a \in A$ is the set $\{x \in A \mid a \sim x\}$. The set of all members that are in $a$'s equivalence 
+\\
+\\
+A partition of a set $A$ is a collection of disjoint subsets of $A$ (with each subset nonempty) such that their union is $A$. 
+\\
+\\
+$a$ and $b$ are relatively prime if they share no common factors (except the trivial factor of 1). 
+\\
+\\
+The integers $b_1,\dots,b_n$ are relatively prime if they share no common factors (except the trivial factor of 1). They are pairwise relatively prime if $b_i,b_j$ are relatively prime for all $i \neq j$. 
+\\
+\\
+A prime number is an integer at least two whose factors are 1 and itself. A composite number is a number that isn't prime. 
+\\
+\\
+The prime factorization of a number $n$ is denoted $\prod_p p^{\alpha(p)}$, where this product symbolizes the product of all primes and the function $\alpha$ returns the exponent of a prime when considering that prime as its input.
+\\
+\\
+A congruence class (modulo $m$) is a set of all integers that are congruent modulo $m$. 
+\\
+\\
+A complete residue system (modulo $m$) is a set of integers $r_1,\dots,r_n$ such that any integer $x$ is congruent modulo $m$ to exactly of the $r_i$'s. 
+\\
+\\
+A reduced residue system (modulo $m$) is a set of integers $s_1,\dots,s_k$ coprime to $m$ such that any integer coprime to $m$ is congruent modulo $m$ to exactly one of the $s_i$'s. 
+\\
+\\
+Euler's totient function, $\phi(m)$, returns the number of elements in a reduced residue system modulo $m$. Equivalently, $\phi(m)$ is the number of integers $t$, with $0 < t \leq m$, such that $t$ is coprime to $m$. 
+\\
+\\
+Consider the integers modulo $m$. Then, take the integer $a$ in modulo $m$. Then, $a$ has a unique inverse (modulo $m$) $a^{-1}$ such that $aa^{-1} \equiv 1 \Mod{m}$. 
+\\
+\\
+A Gaussian integer is a complex number of the form $a + bi$, where $a,b \in \mathbb{Z}$. 
+\\
+\\
+$\mathbb{Z}[x]$ is the set of all polynomials with integer coefficients.
+\\
+\\
+The number of solutions to the congruence $f(x) \equiv g(x) \Mod{m}$ is the number of congruence classes that satisfy $f(x) - g(x) \equiv 0 \Mod{m}$. 
+\\
+\\
+The degree of the congruence $f(x) \equiv 0 \Mod{m}$ is the coefficient of the highest degree term of $f$ that doesn't divide $m$, and undefined if all coefficients of $f$ divide $m$. To find the degree of the congruence $f(x) \equiv g(x) \Mod{m}$, do $(f-g)(x) \equiv 0 \Mod{m}$ and calculate the degree as described in the previous sentence. 
+\\
+\\
+A polynomial-time algorithm is an algorithm whose run time is a polynomial function of the length of its input.
+\\
+\\
+A weak probable prime to the base $a$ is a number $p>1$ that satisfies $a^{p-1} \equiv 1 \Mod{p}$. A weak pseudoprime to the base $a$ is a number $p>1$ that satisfies $a^{p-1} \equiv 1 \Mod{p}$ but $p$ is composite. 
+\\
+\\
+Consider the following algorithm: \\
+\begin{enumerate}
+    \item Find $j$ and $d$ odd such that $m-1 = 2^jd$. 
+    \item If $a^d \equiv \pm \Mod{m}$, then $m$ is a strong probable prime, stop. 
+    \item Square $a^d$ to get $a^{2d}$. If $a^{2d} \equiv 1 \Mod{m}$, then $m$ is composite. If $a^{2d} \equiv -1 \Mod{m}$, then $m$ is a strong probable prime, stop. 
+    \item Repeat this procedure for the list $a^{4d}, \dots, a^{2^{j-1}d}$. 
+    \item If the procedure has not yet terminated, $m$ is composite. 
+\end{enumerate}
+If the test is inconclusive, then $m$ is composite. $m$ is a strong pseudoprime to the base $a$ if the test with $m$ is conclusive but $m$ is both odd and composite. 
+\\
+\\
+A Carmichael number is a composite number $m$ which is a weak pseudoprime to the base $a$ for all integers $a$ coprime to $m$. 
+\\
+\\
+$p^\alpha$ exactly divides $n$ (denote: $p^\alpha \mid\mid n$) if $p^\alpha \mid n$ but $p^{\alpha + 1} \nmid n$. 
+\end{document}

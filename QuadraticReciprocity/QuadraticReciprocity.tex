@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\allowdisplaybreaks
+\allowbreak
+
+% no indent (by default)
+\setlength\parindent{0pt}
+
+% Definitions
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+
+% Theorems
+\newcounter{customThm}
+\renewcommand{\thecustomThm}{\arabic{customThm}}
+\newtheorem{theorem}[customThm]{Theorem}
+
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\begin{document}
+
+Compute $\left(\frac{-42}{61}\right)$. 
+\\
+\\
+For this, we utilize the following results. 
+
+\renewcommand{\thecustomThm}{2.37*}
+\begin{theorem}
+    Let $n = 2$ and $\gcd(a,p) = 1$ with $a \in \mathbb{Z}$. Then $a$ is a quadratic residue modulo $p$ iff $a^{(p-1)/2} \equiv 1 \Mod{p}$. 
+\end{theorem}
+
+\renewcommand{\thecustomThm}{3.1(2)}
+\begin{theorem}
+The second part of Theorem 3.1 states that if $a,b \in \mathbb{Z}$ and $p$ an odd prime, then
+$$
+\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right)
+$$
+\end{theorem}
+
+\renewcommand{\thecustomThm}{3.3(2)}
+\begin{theorem}
+    The second part of Theorem 3.3 states that if $p$ is an odd prime,
+    $$
+    \left(\frac{2}{p}\right) = (-1)^{\left(p^2 - 1\right)/8}.
+    $$
+\end{theorem}
+
+\renewcommand{\thecustomThm}{3.4}
+\begin{theorem}
+    The Gaussian reciprocity law. If $p$ and $q$ are distinct odd primes, then 
+    $$
+    \left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}}.
+    $$
+\end{theorem}
+
+\textit{Solution:} Set $p=61$ and note $-42 = -1 \cdot 2 \cdot 3 \cdot 7$. By Theorem 3.1(2), we have 
+$$
+\left(\frac{-42}{61}\right) = \left(\frac{-1}{61}\right)\left(\frac{2}{61}\right)\left(\frac{3}{61}\right)\left(\frac{7}{61}\right)
+$$.
+
+If $a=-1$, $a^{(p-1)/2} = (-1)^{30} = 1 \equiv 1 \Mod{61}$. By Theorem $2.37^*$, $-1$ is a quadratic residue modulo $p=61$, so $\left(\frac{-1}{61}\right) = 1$. If $a=2$, then by Theorem $3.3(2)$, $\left(\frac{2}{61}\right) = (-1)^{(61^2 - 1)/8} = -1$. If $a=3$, by Theorem 3.4, $\left(\frac{3}{61}\right)\left(\frac{61}{3}\right) = (-1)^{\frac{2}{2} \cdot \frac{60}{2}} = 1$. Since both 3 and 61 are prime, $\left(\frac{61}{3}\right) = \pm 1$, so our equation becomes $\left(\frac{3}{61}\right) = \left(\frac{61}{3}\right) \cdot 1 = \left(\frac{61}{3}\right)$. Theorem $2.37^*$ yields $61^{2/2} = 61 \equiv 1 \Mod{3}$, so by definition, $\left(\frac{61}{3}\right) = 1 = \left(\frac{3}{61}\right)$. If $a=7$, then Theorem 3.4 gives $\left(\frac{7}{61}\right)\left(\frac{61}{7}\right) = (-1)^{\frac{6}{2} \cdot \frac{60}{2}} = (-1)^{90} = 1$. Using a similar argument as the previous sentence gives $\left(\frac{7}{61}\right) = \left(\frac{61}{7}\right)$. Then, $61^{6/2} = 61^3 = 226981 \equiv 6 \not\equiv 1 \Mod{7}$, so $\left(\frac{61}{7}\right) = -1 = \left(\frac{7}{61}\right)$. By multiplication, we have $\left(\frac{-42}{61}\right) = 1$. $\qed$ 
+
+ 
+\end{document}
