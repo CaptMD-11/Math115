@@ -88,7 +88,7 @@ $\mathbb{Z}[x]$ is the set of all polynomials with integer coefficients.
 The number of solutions to the congruence $f(x) \equiv g(x) \Mod{m}$ is the number of congruence classes that satisfy $f(x) - g(x) \equiv 0 \Mod{m}$. 
 \\
 \\
-The degree of the congruence $f(x) \equiv 0 \Mod{m}$ is the coefficient of the highest degree term of $f$ that doesn't divide $m$, and undefined if all coefficients of $f$ divide $m$. To find the degree of the congruence $f(x) \equiv g(x) \Mod{m}$, do $(f-g)(x) \equiv 0 \Mod{m}$ and calculate the degree as described in the previous sentence. 
+Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_0$, with $a_i \in \mathbb{Z}$ for all $i$. The degree of the congruence $f(x) \equiv 0 \Mod{m}$ is the highest value of $i$ such that $m \nmid a_i$, and undefined if $m \mid a_i$ for all $i$. To find the degree of the congruence $f(x) = g(x) \Mod{m}$ (with $f,g \in \mathbb{Z}[x]$), find the degree of $(f-g)(x) \equiv 0 \Mod{m}$. 
 \\
 \\
 A polynomial-time algorithm is an algorithm whose run time is a polynomial function of the length of its input.
@@ -100,7 +100,7 @@ A weak probable prime to the base $a$ is a number $p>1$ that satisfies $a^{p-1} 
 Consider the following algorithm: \\
 \begin{enumerate}
     \item Find $j$ and $d$ odd such that $m-1 = 2^jd$. 
-    \item If $a^d \equiv \pm \Mod{m}$, then $m$ is a strong probable prime, stop. 
+    \item If $a^d \equiv \pm 1 \Mod{m}$, then $m$ is a strong probable prime, stop. 
     \item Square $a^d$ to get $a^{2d}$. If $a^{2d} \equiv 1 \Mod{m}$, then $m$ is composite. If $a^{2d} \equiv -1 \Mod{m}$, then $m$ is a strong probable prime, stop. 
     \item Repeat this procedure for the list $a^{4d}, \dots, a^{2^{j-1}d}$. 
     \item If the procedure has not yet terminated, $m$ is composite. 
