@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage[left=2cm, right=2cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\lcm}{lcm}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\begin{document}
+\title{Math 115 - Midterm 1+2 Theorems}
+\author{}
+\date{}
+\maketitle
+\date
+
+\begin{enumerate}
+    \item \textbf{Corollary.} Let $a=\prod_p p^{\alpha(p)}$, $b=\prod_p p^{\beta(p)}$, $c=\prod_p p^{\gamma(p)}$. 
+    \begin{enumerate}
+        \item $ab=c \iff \alpha(p) + \beta(p) = \gamma(p) \hspace{0.2cm} \forall p$. 
+        \item $a \mid c \iff \alpha(p) \leq \gamma(p) \hspace{0.2cm} \forall p$. 
+        \item $c$ is a common divisor of $a$ and $b$ iff $\gamma(p) \leq \min\left(\alpha(p), \beta(p)\right) \hspace{0.2cm} \forall p$. 
+        \item $\gcd(a,b) = \prod_p p^{\min(\alpha(p), \beta(p))}$. 
+        \item $\lcm(a,b) = \prod_p p^{\max(\alpha(p), \beta(p))}$. 
+        \item $c$ is the square of an integer iff $\gamma(p)$ is even for all $p$. 
+    \end{enumerate}
+    \item \textbf{Pascal's Identity. } ${\alpha + 1 \choose k + 1} = {\alpha \choose k+1} + {\alpha \choose k}$. 
+    \item \textbf{Binomial Theorem. } $(x+y)^n = \sum_{i=0}^{n} {n \choose i} x^{n-i} y^i$. 
+    \item \textbf{Theorem. } If $a \equiv b \Mod{m}$, then $\gcd(a,m) = \gcd(b,m)$. 
+    \item \textbf{Euler's Theorem. } If $\gcd(a,m) = 1$, then $a^{\phi(m)} \equiv 1 \Mod{m}$. 
+    \item \textbf{Fermat's Little Theorem. } Let $p$ be a prime. Then: 
+    \begin{enumerate}
+        \item $\forall a \in \mathbb{Z}$ and $a$ not a multiple of $p$, then $a^{p-1} \equiv 1 \Mod{p}$. 
+        \item $\forall a \in \mathbb{Z}$, $a^p \equiv a \Mod{p}$. 
+    \end{enumerate}
+    \item \textbf{Wilson's Theorem. } If $p$ is prime, then $(p-1)! \equiv -1 \Mod{p}$. 
+    \item \textbf{Solvability of $x^2 \equiv -1 \Mod{p}$. } Let $p$ be a prime. Then, $x^2 \equiv -1 \Mod{p}$ hasa solution $x \in \mathbb{Z}$ iff $p=2$ or $p \equiv 1 \Mod{4}$. 
+    \item \textbf{Fermat's Theorem on Sum of Squares. } Let $p$ be a prime such that $p \equiv 1 \Mod{4}$. Then $p$ can be written as $p = a^2 + b^2$ with $a,b \in \mathbb{Z}$. 
+    \item \textbf{Solving Degree 1 Congruences. } Let $a,b \in \mathbb{Z}$ and let $g = \gcd(a,m)$. Then: 
+    \begin{enumerate}
+        \item The congruence $ax \equiv b \Mod{m}$ has a solution iff $g \mid b$. 
+        \item If (a) is true, then $\frac{a}{g}x \equiv \frac{b}{g} \Mod{\frac{m}{g}}$ has a solution modulo $\frac{m}{g}$. 
+    \end{enumerate}
+    \item \textbf{Chinese Remainder Theorem. } If $x \equiv a_1 \Mod{m_1}, \dots, x \equiv a_k \Mod{m_k}$ (where the $m_i$'s are pairwise relatively prime), then let $M=m_1 m_2\cdot\cdot\cdot\cdot m_k$ and $y_i = \textrm{inverse}\left(\frac{M}{m_i} \Mod{m_i}\right)$. Then, a solution to the simultaneous congruence is given by $x \equiv a_1 \frac{M}{m_1} y_1 + \dots + a_k \frac{M}{m_k} y_k \Mod{M}$.  
+    \item \textbf{Theorem. } If $m \in \mathbb{Z}_{>0}$, then $\phi(m) = \left(\prod_{p \textrm{ prime}, p \mid m} (1-\frac{1}{p}) \right)\cdot m$. 
+    \item \textbf{RSA Cryptography Lemma. } Suppose $m \in \mathbb{Z}_{>0}$ and $\gcd(a,m) = 1$. Let $h,h' \in \mathbb{Z}_{>0}$ such that $hh' \equiv 1 \Mod{\phi(m)}$. Then $a^{kk'} \equiv a \Mod{m}$. 
+    \item \textbf{Primality Testing. } If there is an integer $a$ such that $0 < a < m$ and $a^{m-1} \not\equiv 1 \Mod{m}$, then $m$ is not prime. 
+    \item \textbf{Hensel's Lemma. } To solve the congruence $f(x) \equiv 0 \Mod{p^k}$, first find the solutions to $f(x) \equiv 0 \Mod{p}$. Then, for each solution $a_1$ to $f(x) \equiv 0 \Mod{p}$, "lift" its solution by the recurrence relation $a_2 = a_1 - f(a_1)\overline{f'(a_1)}$, where $\overline{f'(a_1)}$ is found by solving $f'(a_1)\overline{f'(a_1)} \equiv 1 \Mod{p}$ for $\overline{f'(a_1)}$. To higher powers, we generalize this recurrence relation to $a_{j+1} = a_j - f(a_j)\overline{f'(a_1)}$.  
+    \item \textbf{Hensel's Lemma (General Case). } Let $f \in \mathbb{Z}[x]$, $a \in \mathbb{Z}$, $j \in \mathbb{Z}_{>0}$, and $\tau \in \mathbb{N}$. Assume that $f(a) \equiv 0 \Mod{p^j}$, $p^{\tau} \mid\mid f'(a)$ and $j \geq 2\tau + 1$. Then: 
+    \begin{enumerate}
+        \item There is a $\tau \in \mathbb{Z}$, unique modulo $p$, such that $f(a + tp^{j-\tau}) \equiv 0 \Mod{p^{j+1}}$. 
+        \item If $b \equiv a \Mod{p^{j-\tau}}$, then $f(b) \equiv f(a) \Mod{p^j}$ and $p^j \mid\mid f'(b)$. 
+    \end{enumerate}
+    \item \textbf{Corollary to Hensel's Lemma. } Let $f \in \mathbb{Z}[x]$, $p$ be prime, $a \in \mathbb{Z}$, $\tau \in \mathbb{N}$, and let $l \in \mathbb{Z}$. Assume that $p^{\tau} \mid\mid f'(a)$, $f(a) \equiv 0 \Mod{p^l}$, and $l \geq 2\tau + 1$. Then, for any $\alpha \geq l$, there exists a $b \in \mathbb{Z}$, unique modulo $p^{\alpha - \tau}$, such that $b \equiv a \Mod{p^{l-\tau}}$ and $f(b) \equiv 0 \Mod{p^\alpha}$. 
+    \item \textbf{Lemma. } Let $f \in \mathbb{Z}[x]$ and $p$ prime. Assume that $a_1,\dots,a_r$ are roots of $f \Mod{p}$, with $r>0$ and $a_i \equiv a_j \Mod{p}$ for all $i \neq j$. Then there is a polynomial $g \in \mathbb{Z}[x]$ such that $f(x) \equiv (x-a_1)g(x) \Mod{p}$. Also, for any such $g$, $a_1,\dots,a_r$ are roots of $g$ modulo $p$. 
+    \item \textbf{Theorem. } If $f(x) \equiv 0 \Mod{p}$ has (at least) $r$ solutions $x \equiv a_1,\dots,a_r \Mod{p}$, with $a_i \not\equiv a_j \Mod{p}$ (for all $i \neq j$), then there is a polynomial $q \in \mathbb{Z}[x]$ such that $f(x) \equiv (x-a_1)\cdot\cdot\cdot(x-a_r)q(x) \Mod{p}$. 
+    \item \textbf{Theorem 2.26. } The congruence $f(x) \equiv 0 \Mod{p}$ of degree $n \geq 0$ has at most $n$ solutions. 
+    \item \textbf{Corollary 2.27. } If $f \in \mathbb{Z}[x]$ has degree $n \geq 0$ (thus, $f \neq 0$), and the congruence $f(x) \equiv 0 \Mod{p}$ has more than $n$ distinct solutions, then $f \equiv 0 \Mod{p}$ (as polynomials). 
+    \item \textbf{Lemma. } Let $f \in \mathbb{Z}[x]$ be a monic polynomial of degree $n$. If the congruence $f(x) \equiv 0 \Mod{p}$ has $n$ solutions, $x \equiv a_1,\dots,a_n \Mod{p}$, distinct modulo $p$, then $f(x) \equiv (x-a_1)\cdot\cdot\cdot(x-a_n) \Mod{p}$. 
+    \item \textbf{Proposition. } Let $f \in \mathbb{Z}[x]$. Then there is a well-defined function $\tilde{f}$ with $\tilde{f}: \mathbb{Z}/m\mathbb{Z} \to \mathbb{Z}/m\mathbb{Z}$ given by $\tilde{f}(\tilde{a}) = \tilde{f(a)}$ for all $\tilde{a} \in \mathbb{Z}/m\mathbb{Z}$. 
+    \item \textbf{Proposition. } Let $f,g \in \mathbb{Z}[x]$. If $f \equiv g \Mod{m}$ (as polynomials), then $\tilde{f} = \tilde{g}$ (as functions $\mathbb{Z}/m\mathbb{Z} \to \mathbb{Z}/m\mathbb{Z}$). 
+    \item \textbf{Corollary. } Let $\psi: \mathbb{Z}/m\mathbb{Z} \to \mathbb{Z}/m\mathbb{Z}$ be any function. If $\psi$ can be given by a polynomial (i.e. $\psi = f$ for some $f \in \mathbb{Z}[x]$), then it can be given by a polynomial of degree less than $p$. 
+    \item \textbf{Theorem 2.28. } If $F: \mathbb{Z}/p\mathbb{Z} \to \mathbb{Z}/p\mathbb{Z}$, then there is a polynomial $f \in \mathbb{Z}[x]$ with degree at most $p-1$ such that $F(x) \equiv f(x) \Mod{p}$ for all residue classes $x$ modulo $p$. 
+    \item \textbf{Theorem. } The polynomials in Theorem 2.28 are unique modulo $p$. 
+    \item \textbf{Corollary 2.30. } Suppose $d>0$ and $d \mid (p-1)$, then the congruence $x^d \equiv 1 \Mod{p}$ has exactly $d$ solutions. 
+    \item \textbf{Proposition. } Let $a$ have order $h$ modulo $m$, and let $n \in \mathbb{N}$. Then, $a^n \equiv 1 \Mod{m}$ iff $n$ is a multiple of $h$. 
+    \item \textbf{Corollary. } If $a$ has order $h$ (modulo $m$), then $h \mid \phi(m)$. 
+    \item \textbf{Corollary. } Let $m,m' \in \mathbb{Z}_{>0}$ and $a \in \mathbb{Z}$. Assume that $a$ has orders $h$ and $h'$ modulo $m$ and $m'$, respectively (i.e. $\gcd(a,m) = \gcd(a,m') = 1$). Then, if $m \mid m'$, then $h \mid h'$. 
+    \item \textbf{Proposition. } Suppose $g$ is a primitive root modulo $m$. Then: 
+    \begin{enumerate}
+        \item $1,g,\dots,g^{\phi(m) - 1}$ are distinct modulo $m$. 
+        \item The above numbers are a reduced residue system modulo $m$. 
+        \item Let $a \in \mathbb{Z}$, with $\gcd(a,m) = 1$. Then there exists an $i \in \mathbb{Z}$ such that for all $j \in \mathbb{N}$, $g^j \equiv a \Mod{m}$ iff $j \equiv i \Mod{\phi(m)}$. 
+    \end{enumerate}
+    \item If there exists a primitive root $g$ modulo $m$, then you have a theory of $\underline{\textrm{discrete logarithms}}$ modulo $m$. 
+    \item \textbf{Generalization of Corollary 2.30. } Assume that there is a primitive root modulo $m$ and let $d$ be a positive divisor of $\phi(m)$. Then, the congruence $x^d \equiv 1 \Mod{m}$ has exactly $d$ solutions. 
+    \item \textbf{Generalization of Theorem 2.37. } Assume that there is a primitive root modulo $m$ and let $n \in \mathbb{Z}_{>0}$, and let $a \in \mathbb{Z}$ coprime to $m$. Then the congruence $x^n \equiv a \Mod{m}$ has $\gcd(n,\phi(m))$ solutions if $a^{\phi(m)/\gcd(n,\phi(m))} \equiv 1 \Mod{m}$ or has no solutions otherwise. 
+    \item \textbf{Euler's Criterion. } Let $p$ be an odd prime and let $a \in \mathbb{Z}$ with $p \nmid a$. Assume that there is a primitive root modulo $p$. Then, $x^2 \equiv a \Mod{p}$ has two solutions if $a^{\frac{p-1}{2}} \equiv 1 \Mod{p}$ or has no solutions otherwise. 
+    \item \textbf{Lemma. } Suppose $a \in \mathbb{Z}$ has order $h$ modulo $m$. Then: 
+    \begin{enumerate}
+        \item If $d>0$, and $d \mid h$, then $a^d$ has order $\frac{h}{d}$ modulo $m$. 
+        \item For all $k \in \mathbb{N}$, $a^k$ has order $\frac{h}{\gcd{h,k}} \Mod{m}$. 
+    \end{enumerate}
+    \item \textbf{Corollary. } If there is a primitive root modulo $m$, then there are $\phi(\phi(m))$ of them (as residue classes modulo $m$). 
+    \item \textbf{Lemma. } Suppose that $a,b \in \mathbb{Z}$ have order $h$ and $k$, respectively modulo $m$, and that $h$ and $k$ are coprime. Then, $ab$ has order $hk$ modulo $m$. 
+    \item If $p$ is prime, then there exists a primitive root modulo $p$. 
+    \item \textbf{Lemma. } Let $m,m' \in \mathbb{Z}_{>0}$ with $m \mid m'$. Let $a \in \mathbb{Z}$, with $\gcd(a,m') = 1$. Then: 
+    \begin{enumerate}
+        \item $\gcd(a,m) = 1$. 
+        \item If $h,h'$ are the orders of $a$ and $m'$ modulo $m$, respectively, then $h \mid h'$. 
+    \end{enumerate}
+    \item \textbf{Theorem. } Let $p$ be an odd prime and let $\alpha \in \mathbb{Z}_{>0}$. THen there exists a primitive root modulo $p^\alpha$. 
+    \item START AT 10/22/24 Notes (which begins with Diffie-Hellman Key Exchange). 
+\end{enumerate}
+
+
+\end{document}
