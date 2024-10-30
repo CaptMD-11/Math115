@@ -144,6 +144,14 @@
         \item $\left(\frac{p}{q}\right)$ if $p \equiv 1 \Mod{4}$ or $q \equiv 1 \Mod{4}$. 
         \item $-\left(\frac{p}{q}\right)$ if $p \equiv q \equiv -1 \Mod{4}$. 
     \end{enumerate}
+    \item \textbf{Quadratic Reciprocity for Jacobi Symbols} Let $Q$ be an odd positive integer. Then: 
+    \begin{enumerate}
+        \item $\left(\frac{-1}{Q}\right) = (-1)^{\frac{Q-1}{2}}$. 
+        \item $\left(\frac{2}{Q}\right) = (-1)^{\frac{Q^2 - 1}{8}}$. 
+        \item If $P$ is an odd positive integer, then $\left(\frac{P}{Q}\right) = (-1)^{\frac{P-1}{2} \cdot \frac{Q-1}{2}}\left(\frac{Q}{P}\right)$
+    \end{enumerate}
+    \item \textbf{Lemma. } For all odd positive integers $a$ and $b$, we have $\frac{ab-1}{2} \equiv \frac{a-1}{2} + \frac{b-1}{2} \Mod{2}$, so therefore, $(-1)^{\frac{ab-1}{2}} = (-1)^{\frac{a-1}{2}}(-1)^{\frac{b-1}{2}}$. 
+    \item For all odd positive integers $a$ and $b$, we have $\frac{(ab)^2 - 1}{8} \equiv \frac{a^2 - 1}{8} + \frac{b^2 - 1}{8} \Mod{2}$, so therefore, $(-1)^{\frac{(ab)^2 - 1}{8}} = (-1)^{\frac{a^2 - 1}{8}}(-1)^{\frac{b^2 - 1}{8}}$. 
     \item \textbf{Theorem 3.10. } Let $f(x,y) = ax^2 + bxy + cy^2$ be a nonzero binary quadratic form with integer coefficients, and let $d = b^2 - 4ac$ be its discriminant. Then: 
     \begin{enumerate}
         \item If $d$ is a perfect square (including $0$), then $f$ can be factored into two linear factors with integer coefficients. 
