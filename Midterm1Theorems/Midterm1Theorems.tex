@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\lcm}{lcm}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\begin{document}
+\title{Math 115 - Midterm 1 Theorems}
+\author{}
+\date{}
+\maketitle
+\date
+
+\begin{enumerate}
+    \item \textbf{Corollary.} Let $a=\prod_p p^{\alpha(p)}$, $b=\prod_p p^{\beta(p)}$, $c=\prod_p p^{\gamma(p)}$. 
+    \begin{enumerate}
+        \item $ab=c \iff \alpha(p) + \beta(p) = \gamma(p) \hspace{0.2cm} \forall p$. 
+        \item $a \mid c \iff \alpha(p) \leq \gamma(p) \hspace{0.2cm} \forall p$. 
+        \item $c$ is a common divisor of $a$ and $b$ iff $\gamma(p) \leq \min\left(\alpha(p), \beta(p)\right) \hspace{0.2cm} \forall p$. 
+        \item $\gcd(a,b) = \prod_p p^{\min(\alpha(p), \beta(p))}$. 
+        \item $\lcm(a,b) = \prod_p p^{\max(\alpha(p), \beta(p))}$. 
+        \item $c$ is the square of an integer iff $\gamma(p)$ is even for all $p$. 
+    \end{enumerate}
+    \item \textbf{Pascal's Identity. } ${\alpha + 1 \choose k + 1} = {\alpha \choose k+1} + {\alpha \choose k}$. 
+    \item \textbf{Binomial Theorem. } $(x+y)^n = \sum_{i=0}^{n} {n \choose i} x^{n-i} y^i$. 
+    \item \textbf{Theorem. } If $a \equiv b \Mod{m}$, then $\gcd(a,m) = \gcd(b,m)$. 
+    \item \textbf{Euler's Theorem. } If $\gcd(a,m) = 1$, then $a^{\phi(m)} \equiv 1 \Mod{m}$. 
+    \item \textbf{Fermat's Little Theorem. } Let $p$ be a prime. Then: 
+    \begin{enumerate}
+        \item $\forall a \in \mathbb{Z}$ and $a$ not a multiple of $p$, then $a^{p-1} \equiv 1 \Mod{p}$. 
+        \item $\forall a \in \mathbb{Z}$, $a^p \equiv a \Mod{p}$. 
+    \end{enumerate}
+    \item \textbf{Wilson's Theorem. } If $p$ is prime, then $(p-1)! \equiv -1 \Mod{p}$. 
+    \item \textbf{Solvability of $x^2 \equiv -1 \Mod{p}$. } Let $p$ be a prime. Then, $x^2 \equiv -1 \Mod{p}$ hasa solution $x \in \mathbb{Z}$ iff $p=2$ or $p \equiv 1 \Mod{4}$. 
+    \item \textbf{Fermat's Theorem on Sum of Squares. } Let $p$ be a prime such that $p \equiv 1 \Mod{4}$. Then $p$ can be written as $p = a^2 + b^2$ with $a,b \in \mathbb{Z}$. 
+    \item \textbf{Solving Degree 1 Congruences. } Let $a,b \in \mathbb{Z}$ and let $g = \gcd(a,m)$. Then: 
+    \begin{enumerate}
+        \item The congruence $ax \equiv b \Mod{m}$ has a solution iff $g \mid b$. 
+        \item If (a) is true, then $\frac{a}{g}x \equiv \frac{b}{g} \Mod{\frac{m}{g}}$ has a solution modulo $\frac{m}{g}$. 
+    \end{enumerate}
+    \item \textbf{Chinese Remainder Theorem. } If $x \equiv a_1 \Mod{m_1}, \dots, x \equiv a_k \Mod{m_k}$ (where the $m_i$'s are pairwise relatively prime), then let $M=m_1 m_2\cdot\cdot\cdot\cdot m_k$ and $y_i = \textrm{inverse}\left(\frac{M}{m_i} \Mod{m_i}\right)$. Then, a solution to the simultaneous congruence is given by $x \equiv a_1 \frac{M}{m_1} y_1 + \dots + a_k \frac{M}{m_k} y_k \Mod{M}$.  
+    \item \textbf{Theorem. } If $m \in \mathbb{Z}_{>0}$, then $\phi(m) = \left(\prod_{p \textrm{ prime}, p \mid m} (1-\frac{1}{p}) \right)\cdot m$. 
+    \item \textbf{RSA Cryptography Lemma. } Suppose $m \in \mathbb{Z}_{>0}$ and $\gcd(a,m) = 1$. Let $h,h' \in \mathbb{Z}_{>0}$ such that $hh' \equiv 1 \Mod{\phi(m)}$. Then $a^{kk'} \equiv a \Mod{m}$. 
+    \item \textbf{Primality Testing. } If there is an integer $a$ such that $0 < a < m$ and $a^{m-1} \not\equiv 1 \Mod{m}$, then $m$ is not prime. 
+    \item \textbf{Hensel's Lemma. } To solve the congruence $f(x) \equiv 0 \Mod{p^k}$, first find the solutions to $f(x) \equiv 0 \Mod{p}$. Then, for each solution $a_1$ to $f(x) \equiv 0 \Mod{p}$, "lift" its solution by the recurrence relation $a_2 = a_1 - f(a_1)\overline{f'(a_1)}$, where $\overline{f'(a_1)}$ is found by solving $f'(a_1)\overline{f'(a_1)} \equiv 1 \Mod{p}$ for $\overline{f'(a_1)}$. To higher powers, we generalize this recurrence relation to $a_{j+1} = a_j - f(a_j)\overline{f'(a_1)}$.  
+\end{enumerate}
+
+
+\end{document}
