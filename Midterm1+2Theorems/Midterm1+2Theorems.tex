@@ -70,7 +70,10 @@
     \item \textbf{Theorem. } If $m \in \mathbb{Z}_{>0}$, then $\phi(m) = \left(\prod_{p \textrm{ prime}, p \mid m} (1-\frac{1}{p}) \right)\cdot m$. 
     \item \textbf{RSA Cryptography Lemma. } Suppose $m \in \mathbb{Z}_{>0}$ and $\gcd(a,m) = 1$. Let $h,h' \in \mathbb{Z}_{>0}$ such that $hh' \equiv 1 \Mod{\phi(m)}$. Then $a^{kk'} \equiv a \Mod{m}$. 
     \item \textbf{Primality Testing. } If there is an integer $a$ such that $0 < a < m$ and $a^{m-1} \not\equiv 1 \Mod{m}$, then $m$ is not prime. 
-    \item \textbf{Hensel's Lemma. } To solve the congruence $f(x) \equiv 0 \Mod{p^k}$, first find the solutions to $f(x) \equiv 0 \Mod{p}$. Then, for each solution $a_1$ to $f(x) \equiv 0 \Mod{p}$, "lift" its solution by the recurrence relation $a_2 = a_1 - f(a_1)\overline{f'(a_1)}$, where $\overline{f'(a_1)}$ is found by solving $f'(a_1)\overline{f'(a_1)} \equiv 1 \Mod{p}$ for $\overline{f'(a_1)}$. To higher powers, we generalize this recurrence relation to $a_{j+1} = a_j - f(a_j)\overline{f'(a_1)}$.  
+    \item \textbf{Hensel's Lemma. } To solve the congruence $f(x) \equiv 0 \Mod{p^k}$, first find the solutions to $f(x) \equiv 0 \Mod{p}$. Then, for each solution $a_1$ to $f(x) \equiv 0 \Mod{p}$, "lift" its solution by the recurrence relation $a_2 = a_1 - f(a_1)\overline{f'(a_1)}$, where $\overline{f'(a_1)}$ is found by solving $f'(a_1)\overline{f'(a_1)} \equiv 1 \Mod{p}$ for $\overline{f'(a_1)}$. To higher powers, we generalize this recurrence relation to $a_{j+1} = a_j - f(a_j)\overline{f'(a_1)}$.  \\
+    \begin{center}
+        \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+    \end{center}
     \item \textbf{Hensel's Lemma (General Case). } Let $f \in \mathbb{Z}[x]$, $a \in \mathbb{Z}$, $j \in \mathbb{Z}_{>0}$, and $\tau \in \mathbb{N}$. Assume that $f(a) \equiv 0 \Mod{p^j}$, $p^{\tau} \mid\mid f'(a)$ and $j \geq 2\tau + 1$. Then: 
     \begin{enumerate}
         \item There is a $\tau \in \mathbb{Z}$, unique modulo $p$, such that $f(a + tp^{j-\tau}) \equiv 0 \Mod{p^{j+1}}$. 
