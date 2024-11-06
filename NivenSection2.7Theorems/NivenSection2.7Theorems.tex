@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{tree-dvips}
+\usepackage{qtree}
+\usepackage[linguistics]{forest}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+\usepackage{blindtext}
+\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\allowdisplaybreaks
+\allowbreak
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedconjecture}{Distinct Factorizations Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\arcsec}{arcsec}
+\newcounter{customDef}
+\renewcommand{\thecustomDef}{\arabic{customDef}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\begin{document}
+\title{Math 115 - Midterm 1+2 Definitions}
+\author{}
+\date{}
+\maketitle
+\date
+
+\begin{enumerate}
+    \item \textbf{Theorem 2.25. } If the degree of the congruence $f(x) \equiv 0 \Mod{p}$ is $n \geq p$, then we can reduce the congruence by computing $\frac{f(x)}{x^p - x}$ by long division of polynomials and taking the remainder polynomial $r(x)$ and we get that the solutions to $r(x) \equiv 0 \Mod{p}$ are precisely those of $f(x) \equiv 0 \Mod{p}$. We also note that the degree of $r(x) \equiv 0 \Mod{p}$ will be less than $p$. 
+    \item \textbf{Theorem 2.26. } The congruence $f(x) \equiv 0 \Mod{p}$ of degree $n$ has at most $n$ solutions. 
+    \item \textbf{Corollary 2.27. } If $f(x) \equiv 0 \Mod{p}$ has more than $n$ solutions, then $p$ divides each of the coefficients of $f(x)$. 
+    \item \textbf{Theorem 2.28. } If $F: \mathbb{Z}/p\mathbb{Z} \to \mathbb{Z}/p\mathbb{Z}$, then there exists an $f \in \mathbb{Z}[x]$ with degree at most $p-1$ such that $F(x) \equiv f(x) \Mod{p}$ for all residue classes $x \Mod{p}$. 
+    \item \textbf{Theorem 2.29. } $f(x) \equiv 0 \Mod{p}$ of degree $n$ has precisely $n$ solutions iff $x^p - x = q(x)f(x) + ps(x)$ where $q(x)$ has degree $p-n$ and $s(x)$ is either $0$ or has degree less than $n$. 
+    \item \textbf{Corollary 2.30. } If $d \mid (p-1)$, then the congruence $x^d \equiv 1 \Mod{p}$ has precisely $d$ solutions. 
+\end{enumerate}
+
+
+\end{document}
