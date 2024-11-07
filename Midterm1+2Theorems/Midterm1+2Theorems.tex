@@ -72,7 +72,7 @@
     \item \textbf{Primality Testing. } If there is an integer $a$ such that $0 < a < m$ and $a^{m-1} \not\equiv 1 \Mod{m}$, then $m$ is not prime. 
     \item \textbf{Hensel's Lemma. } To solve the congruence $f(x) \equiv 0 \Mod{p^k}$, first find the solutions to $f(x) \equiv 0 \Mod{p}$. Then, for each solution $a_1$ to $f(x) \equiv 0 \Mod{p}$, "lift" its solution by the recurrence relation $a_2 = a_1 - f(a_1)\overline{f'(a_1)}$, where $\overline{f'(a_1)}$ is found by solving $f'(a_1)\overline{f'(a_1)} \equiv 1 \Mod{p}$ for $\overline{f'(a_1)}$. To higher powers, we generalize this recurrence relation to $a_{j+1} = a_j - f(a_j)\overline{f'(a_1)}$.  \\
     \begin{center}
-        \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+        \hrule
     \end{center}
     \item \textbf{Hensel's Lemma (General Case). } Let $f \in \mathbb{Z}[x]$, $a \in \mathbb{Z}$, $j \in \mathbb{Z}_{>0}$, and $\tau \in \mathbb{N}$. Assume that $f(a) \equiv 0 \Mod{p^j}$, $p^{\tau} \mid\mid f'(a)$ and $j \geq 2\tau + 1$. Then: 
     \begin{enumerate}
@@ -181,6 +181,30 @@
         \item $f$ and $g$ represent the same numbers. 
         \item $f$ and $g$ properly represent the same numbers. 
     \end{enumerate}
+    \item \textbf{Reducing Quadratic forms} Begin with $f(x,y) = ax^2 + bxy + cy^2$. Carry out the following procedure: 
+    \begin{enumerate}
+        \item \textit{Step 1: } If $|c| < |a|$, then $\begin{pmatrix}
+            0 & 1 \\
+            -1 & 0
+        \end{pmatrix} \in \Gamma$ takes $f$ to $f(y,-x) = cx^2 - bxy + ay^2$. So, after doing this if necessary, we may assume that $|a| \leq |c|$. 
+        \item \textit{Step 2: } Notice that, for any $m \in \mathbb{Z}$, the matrix $\begin{pmatrix}
+            1 & m \\
+            0 & 1
+        \end{pmatrix} \in \Gamma$ takes $f(x,y)$ to $f(x+my,y) = ax^2 + (2am+b)xy + (am^2 + bm + c)y^2$. Choose $m$ (unique) such that $-|a| < 2am + b \leq |a|$. 
+        \item \textit{Step 3: } If $|c| < |a|$, go back to Step 1. Otherwise, continue. 
+        \item \textit{Step 4: }
+        \begin{itemize}
+            \item If $|c| > |a|$, done; we have a reduced form. 
+            \item If $|c| = |a|$ and $b \geq 0$, done; we have a reduced form. 
+            \item If $|c| = |a|$ and $b < 0$, then use $\begin{pmatrix}
+                0 & 1 \\
+                -1 & 0
+            \end{pmatrix}$ again. Your form is reduced, because $0 < b < |a| = |c|$. 
+        \end{itemize}
+    \end{enumerate}
+    \begin{center}
+        \hrule
+    \end{center}
 \end{enumerate}
 
 
