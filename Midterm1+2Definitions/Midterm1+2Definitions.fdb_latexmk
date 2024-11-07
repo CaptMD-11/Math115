@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1730606836 "/Users/nydhruva/git/LaTeX/Math115/Midterm1+2Definitions/Midterm1+2Definitions.tex" "Midterm1+2Definitions.pdf" "Midterm1+2Definitions" 1730606836 0
-  "/Users/nydhruva/git/LaTeX/Math115/Midterm1+2Definitions/Midterm1+2Definitions.tex" 1730606835 5744 0e01d4716ef891af28e809fa547b9364 ""
+["pdflatex"] 1730955551 "/Users/nydhruva/git/LaTeX/Math115/Midterm1+2Definitions/Midterm1+2Definitions.tex" "Midterm1+2Definitions.pdf" "Midterm1+2Definitions" 1730955552 0
+  "/Users/nydhruva/git/LaTeX/Math115/Midterm1+2Definitions/Midterm1+2Definitions.tex" 1730955551 10596 8499321ed43b1f31b9a1865c6db3301b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -8,6 +8,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -20,6 +21,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm" 1136768653 564 cb1a5fc3f0326dd000c6e6c0fce59d7c ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
@@ -158,6 +160,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1667332637 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1667332637 3052 30236f0cc243a8651b82240dfd2e8b9d ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1667332637 2462 8ce5f9a9c63002f2c1af03c262cf29af ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd" 1667332637 2469 24e8437abfd2393aed5f0ac9f00f801e ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/base/size12.clo" 1667332637 8449 c314623021fbddd0180c05345324933c ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/changepage/changepage.sty" 1256071977 4523 a9044e2dc40e764dac60d2acda7ae919 ""
@@ -261,9 +264,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1693530960 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1693530901 7883453 e715a5447c98d5844e9e25d55e00422f ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Midterm1+2Definitions.aux" 1730606836 554 dd2b48f1aba1e3b725040b4d3abf7fbe "pdflatex"
-  "Midterm1+2Definitions.out" 1730606836 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Midterm1+2Definitions.tex" 1730606835 5744 0e01d4716ef891af28e809fa547b9364 ""
+  "Midterm1+2Definitions.aux" 1730955552 554 1946bb2d40f231db7fb58bc3ffb28649 "pdflatex"
+  "Midterm1+2Definitions.out" 1730955552 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Midterm1+2Definitions.tex" 1730955551 10596 8499321ed43b1f31b9a1865c6db3301b ""
   (generated)
   "Midterm1+2Definitions.aux"
   "Midterm1+2Definitions.log"

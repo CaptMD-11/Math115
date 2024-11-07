@@ -70,9 +70,58 @@
     \item A Carmichael number is a composite number $m$ which is a weak pseudoprime to the base $a$ for all integers $a$ coprime to $m$. 
     \item $p^\alpha$ exactly divides $n$ (denote: $p^\alpha \mid\mid n$) if $p^\alpha \mid n$ but $p^{\alpha + 1} \nmid n$. \\
     \begin{center}
-        \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+        \hrule
     \end{center}
-    \item ADD MIDTERM 2 DEFINITIONS FROM HERE ONWARDS
+    \item \textbf{Root of $f \in \mathbb{Z}[x]$ modulo $m$. } Let $f \in \mathbb{Z}[x]$ and let $m \in \mathbb{Z}_{>0}$. Then, a root of $f$ modulo $m$ is an integer $a$ such that $f(a) \equiv 0 \Mod{m}$. 
+    \item \textbf{Monic Polynomial. } A polynomial in $\mathbb{C}[x]$ (or $\mathbb{Z}[x])$ is monic if (it is nonzero) its leading coefficient is 1. 
+    \item \textbf{$\mathbb{Z}/m\mathbb{Z}$. } This is the set of congruence classes modulo $m$. 
+    \item \textbf{$\left(\mathbb{Z}/m\mathbb{Z}\right)^\ast$} This set is defined to be the set $\{\tilde{a} \in \mathbb{Z} : \gcd(a,m) = 1\}$. This set is well-defined and contains $\phi(m)$ elements. 
+    \item \textbf{Order of $a$ modulo $m$. } Let $a \in \mathbb{Z}$ and $m \in \mathbb{Z}_{>0}$ with $\gcd(a,m) = 1$. Then the order of $a$ modulo $m$ is the smallest integer $h > 0$ such that $a^h \equiv 1 \Mod{m}$. If $\gcd(a,m) \neq 1$, then the order of $a$ modulo $m$ is \underline{undefined}. 
+    \item \textbf{Primitive root modulo $m$. } A primitive root modulo $m$ is an integer $g$ whose order modulo $m$ is $\phi(m)$. 
+    \item \textbf{Quadratic residue modulo $m$. } Let $m \in \mathbb{Z}_{>0}$. A quadratic residue modulo $m$ is an integer $a$ coprime to $m$ such that $x^2 \equiv a \Mod{m}$ has a solution. 
+    \item \textbf{Quadratic non-residue modulo $m$. } Let $m \in \mathbb{Z}_{>0}$. A quadratic non-residue modulo $m$ is an integer $a$ coprime to $m$ such that $x^2 \equiv a \Mod{m}$ does not have a solution. 
+    \item \textbf{Legendre Symbol, $\left(\frac{a}{p}\right)$. } Let $a \in \mathbb{Z}$. Then, $\left(\frac{a}{p}\right)$ is defined to be 1 if $a$ is a quadratic residue modulo $p$, -1 if $a$ is a quadratic non-residue modulo $p$, and 0 if $p \mid a$. 
+    \item \textbf{Jacobi Symbol, $\left(\frac{P}{Q}\right)$. } Let $Q$ be an odd positive integer with prime factors $Q = q_1 \cdot \dots \cdot q_s$, where all the $q_i$ are odd primes, not necessarily distinct. Then, the Jacobi Symbol $\left(\frac{P}{Q}\right)$ is defined by: 
+    $$
+    \left(\frac{P}{Q}\right) = \prod_{j=1}^s \left(\frac{P}{q_j}\right)
+    $$
+    where $\left(\frac{P}{q_j}\right)$ is the Legendre Symbol. 
+    \item \textbf{Binary Quadratic Form. } A binary quadratic form is a polynomial of the form $ax^2 + bxy + cy^2$, where $x,y$ are the variables, and $a,b,c$ are the coefficients. 
+    \item \textbf{Binary Quadratic Form represents $n$. } A binary quadratic form $f=f(x,y)$ represents an integer $n$ if $f(x_0,y_0) = n$ for some $x_0,y_0 \in \mathbb{Z}$ with $(x_0,y_0) \neq (0,0)$. 
+    \item \textbf{Binary Quadratic Form properly represents $n$. } The binary quadratic form $f=f(x_0,y_0)$ properly represents $n$ if $f(x_0,y_0) = n$ with $x_0,y_0 \in \mathbb{Z}$ relatively prime. 
+    \item \textbf{Discriminant of a binary quadratic form. } The discriminant of a binary quadratic form $ax^2 + bxy + cy^2$ is the quantity $d = b^2 - 4ac$. 
+    \item \textbf{Types of binary quadratic forms. } A binary quadratic form $f(x,y)$ is: 
+    \begin{enumerate}
+        \item indefinite if it takes on both positive and negative values. 
+        \item positive semidefinite if $f(x_0,y_0) \geq 0$ for all $x_0,y_0$. 
+        \item positive definite if $f(x_0,y_0) > 0$ for all $x_0,y_0$ with $(x_0,y_0) \neq (0,0)$. 
+        \item negative semidefinite if $f(x_0,y_0) \leq 0$ for all $x_0,y_0$. 
+        \item negative definite if $f(x_0,y_0) < 0$ for all $x_0,y_0$ with $(x_0,y_0) \neq (0,0)$. 
+        \item definite if it is positive definite or negative definite. 
+        \item semidefinite if positive semidefinite or negative semidefinite. 
+    \end{enumerate}
+    (note: we let $x_0,y_0 \in \mathbb{R},\mathbb{Q}, \mathbb{Z}$). 
+    \item \textbf{$T_M$, where $M$ is a 2x2 matrix. } Given a 2x2 matrix $M$, let $T_M: \mathbb{R}^2 \to \mathbb{R}^2$ be the function $\begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix} \mapsto M\begin{pmatrix}
+    x \\
+    y
+    \end{pmatrix}$. In other words, if $M = \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}$, then $T_M \begin{pmatrix}
+        x \\
+        y
+    \end{pmatrix} = (ax+by, cx+dy)$. 
+    \item \textbf{Modular group, $\Gamma$. } The modular group $\Gamma$ is the set $\Gamma = $ \{2x2 matrices with integer entries and determinant 1\}. 
+    \item \textbf{Determinant of a matrix $M$. } If $M = \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}$, then the determinant of $M$ is given by $\det M = ad - bc$. 
+    \item \textbf{$M$ takes $f$ to $g$. } A matrix $M \in \Gamma$ takes $f$ to $g$ (where $f$ and $g$ are forms) if $f \circ T_M = g$. 
+    \item \textbf{Equivalent Forms. } The forms $f$ and $g$ are equivalent if $\exists M \in \Gamma$ that takes $f$ to $g$. 
+    \item \textbf{Reduced binary quadratic form. } Let $f(x,y) = ax^2 + bxy + cy^2$ be a form whose discriminant is not a perfect square. Then, $f$ is reduced if $-|a| < b \leq |a| < |c|$ or $0 \leq b \leq |a| = |c|$. 
 \end{enumerate}
 
 
