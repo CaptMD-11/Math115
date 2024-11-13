@@ -103,7 +103,6 @@
         \item The above numbers are a reduced residue system modulo $m$. 
         \item Let $a \in \mathbb{Z}$, with $\gcd(a,m) = 1$. Then there exists an $i \in \mathbb{Z}$ such that for all $j \in \mathbb{N}$, $g^j \equiv a \Mod{m}$ iff $j \equiv i \Mod{\phi(m)}$. 
     \end{enumerate}
-    \item If there exists a primitive root $g$ modulo $m$, then you have a theory of $\underline{\textrm{discrete logarithms}}$ modulo $m$. 
     \item \textbf{Generalization of Corollary 2.30. } Assume that there is a primitive root modulo $m$ and let $d$ be a positive divisor of $\phi(m)$. Then, the congruence $x^d \equiv 1 \Mod{m}$ has exactly $d$ solutions. 
     \item \textbf{Generalization of Theorem 2.37. } Assume that there is a primitive root modulo $m$ and let $n \in \mathbb{Z}_{>0}$, and let $a \in \mathbb{Z}$ coprime to $m$. Then the congruence $x^n \equiv a \Mod{m}$ has $\gcd(n,\phi(m))$ solutions if $a^{\phi(m)/\gcd(n,\phi(m))} \equiv 1 \Mod{m}$ or has no solutions otherwise. 
     \item \textbf{Euler's Criterion. } Let $p$ be an odd prime and let $a \in \mathbb{Z}$ with $p \nmid a$. Assume that there is a primitive root modulo $p$. Then, $x^2 \equiv a \Mod{p}$ has two solutions if $a^{\frac{p-1}{2}} \equiv 1 \Mod{p}$ or has no solutions otherwise. 
@@ -122,6 +121,7 @@
     \end{enumerate}
     \item \textbf{Theorem. } Let $p$ be an odd prime and let $\alpha \in \mathbb{Z}_{>0}$. THen there exists a primitive root modulo $p^\alpha$. 
     \item \textbf{Theorem 2.41} There exists a primitive root modulo $m$ iff $m = 1,2,4, p^\alpha, 2p^\alpha$, where $\alpha \in \mathbb{Z}_{>0}$ and $p$ an odd prime. 
+    \item \textbf{Theorem 2.39} If $p$ is a prime, then there exist $\phi(\phi(p^2)) = (p-1)\phi(p-1)$ many primitive roots modulo $p^2$. 
     \item \textbf{Diffie-Hellman Key Exchange. } This is a process used in order to initialize the secure line before message transfers occur. Suppose Alice and Bob are the participants. Then: 
     \begin{enumerate}
         \item They (publicly) agree on a large prime $p$ (600 digits...) and a primitive root $g$ modulo $p$. 
