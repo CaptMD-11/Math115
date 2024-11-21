@@ -253,7 +253,34 @@
     \end{enumerate}
     \item \textbf{Möbius Inversion Formula. } If $F(n) = \sum_{d \mid n} f(d)$ for all $n>0$, then $f(n) = \sum_{d \mid n} \mu(d)F(n/d)$ for all $n>0$. 
     \item \textbf{Converse of Möbius Inversion Formula. } If $f(n) = \sum_{d \mid n} \mu(d)F(n/d)$ for all $n>0$, then $F(n) = \sum_{d \mid n} f(d)$ for all $n>0$. 
-    \item ADD THEOREMS FOR NOVEMBER 21 LECTURE
+    \item \textbf{Properties of Simple Continued Fractions. } Let $\langle x_0,\dots,x_n \rangle$ be a finite continued fraction. Then: 
+    \begin{enumerate}
+        \item $\langle x_0,\dots,x_n \rangle = x_0 + \frac{1}{\langle x_1,\dots, x_n \rangle}$ if $n>0$. 
+        \item $\langle x_0,\dots,x_n \rangle = \langle x_0,\dots,x_{n-2},x_{n-1} + \frac{1}{x_n} \rangle$ if $n>0$. 
+        \item $\langle x_0,\dots,x_n \rangle \geq x_0$, with equality iff $n=0$. 
+    \end{enumerate}
+    \item \textbf{Theorem. } Every finite simple continued fractions evaluates to a rational number. 
+    \item \textbf{Theorem (Existence of Simple Continued Fractions). } For all $x \in \mathbb{Q}$, there is a finite sequence $a_0,\dots,a_n \in \mathbb{Z}$ with $n \in \mathbb{N}$ such that $a_i > 0$ for all $i>0$ and $x=\langle a_0,\dots,a_n \rangle$. 
+    \item \textbf{Theorem. } Let $\langle a_0,\dots,a_n \rangle$ and $\langle b_0,\dots,b_m \rangle$ be finite simple continued fractions. Assume the following: 
+    \begin{enumerate}
+        \item $n=0$ or $a_n>1$. 
+        \item $m=0$ or $b_m>1$. 
+        \item $\langle a_0,\dots,a_n \rangle = \langle b_0,\dots,b_m \rangle$. 
+    \end{enumerate}
+    Then, $n=m$ and $a_i = b_i$ for all $i$. 
+    \item \textbf{Theorem. } Let $a_0,a_1,\dots$ be an infinite sequence of integers, with $a_i > 0$ for all $i>0$. Define sequences $\{h_n\}$ and $\{k_n\}$ (with $n=-2,-1,0,1,\dots$) defined by $h_{-2} = 0$, $h_{-1} = 1$, $h_n = a_nh_{n-1} + h_{n-2}$ for all $n \geq 0$ and $k_{-2} = 1$, $k_{-1} = 0$, $k_n = a_nk_{n-1} + k_{n-2}$. Then, for any sequence $\{a_n\}$ as defined, we have: 
+    $$
+    \langle a_0,\dots,a_{n-1},x \rangle = \frac{h_{n-1}x + h_{n-2}}{k_{n-1}x + k_{n-2}}
+    $$
+    for all $n \geq 0$ and $x \in \mathbb{R}_{>0}$. 
+    \item \textbf{Proposition. } Let $n \in \mathbb{N}$ and let $r_n = \langle a_0,\dots,a_n \rangle$. Then $r_n = h_n/k_n$. 
+    \item \textbf{Lemma. } We have the following: 
+    \begin{enumerate}
+        \item $h_nk_{n-1} - h_{n-1}k_n = (-1)^{n-1}$ for all $n \geq -1$. 
+        \item $r_n - r_{n-1} = \frac{(-1)^{n-1}}{k_nk_{n-1}}$ for all $n \geq -1$. 
+    \end{enumerate}
+    \item \textbf{Corollary. } $\gcd(h_n,k_n) = 1$ for all $n \geq 0$. 
+    \item ADD THEOREMS FROM NOVEMBER 26 LECTURE
 \end{enumerate}
 
 
