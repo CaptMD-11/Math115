@@ -66,6 +66,8 @@
     \item \textbf{Fermat's Theorem on Sum of Squares. } Let $p$ be a prime such that $p \equiv 1 \Mod{4}$. Then $p$ can be written as $p = a^2 + b^2$ with $a,b \in \mathbb{Z}$. 
     \item \textbf{Solving Degree 1 Congruences. } Let $a,b \in \mathbb{Z}$ and let $g = \gcd(a,m)$. Then: 
     \begin{enumerate}
+        \item Let $x,y,a \in \mathbb{Z}$. Then $ax \equiv ay \Mod{m}$ iff $x \equiv y \Mod{\frac{m}{\gcd(a,m)}}$.
+        \item If $\gcd(a,m) = 1$, then $ax \equiv ay \Mod{m}$ iff $x \equiv y \Mod{m}$.
         \item The congruence $ax \equiv b \Mod{m}$ has a solution iff $g \mid b$. 
         \item If (a) is true, then $\frac{a}{g}x \equiv \frac{b}{g} \Mod{\frac{m}{g}}$ has a solution modulo $\frac{m}{g}$. 
     \end{enumerate}

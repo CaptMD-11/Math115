@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.31)  26 NOV 2024 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.31)  26 NOV 2024 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,7 +1073,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 55.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
@@ -1083,11 +1083,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 Non-PDF special ignored!
 <special> header=tree-dvips91.pro
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 201.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 203.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [5] [6]
-Overfull \hbox (15.10167pt too wide) in paragraph at lines 292--293
+Overfull \hbox (15.10167pt too wide) in paragraph at lines 294--295
 []\OT1/ptm/b/n/10.95 Theorem (Unique-ness).  \OT1/ptm/m/n/10.95 Let $\OMS/ztmcm/m/n/10.95 h\OML/ztmcm/m/it/10.95 a[]; a[]; [] \OMS/ztmcm/m/n/10.95 i$ \OT1/ptm/m/n/10.95 and $\OMS/ztmcm/m/n/10.95 h\OML/ztmcm/m/it/10.95 b[]; b[]; [] \OMS/ztmcm/m/n/10.95 i$ \OT1/ptm/m/n/10.95 be in-fi-nite sim-ple con-tin-ued frac-tions. If $\OMS/ztmcm/m/n/10.95 h\OML/ztmcm/m/it/10.95 a[]; a[]; [] \OMS/ztmcm/m/n/10.95 i \OT1/ztmcm/m/n/10.95 =
  []
 
@@ -1096,18 +1096,18 @@ Package rerunfilecheck Info: File `Math115Thms.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37346 strings out of 476025
- 842195 string characters out of 5790017
- 1879388 words of memory out of 5000000
+ 37348 strings out of 476025
+ 842211 string characters out of 5790017
+ 1880388 words of memory out of 5000000
  56917 multiletter control sequences out of 15000+600000
  539599 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,8n,120p,1665b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,8n,120p,1665b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Math115Thms.pdf (7 pages, 135695 bytes).
+Output written on Math115Thms.pdf (7 pages, 135919 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 269 compressed objects within 3 object streams
- 179 named destinations out of 1000 (max. 500000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 181 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
