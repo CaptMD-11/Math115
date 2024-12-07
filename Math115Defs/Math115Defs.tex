@@ -14,7 +14,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{mathtools}
 \usepackage{blindtext}
-\usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
+% \usepackage[cal=esstix,frak=euler,scr=boondox,bb= pazo]{mathalfa}
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 \allowdisplaybreaks
@@ -31,7 +31,7 @@
 \renewcommand{\thecustomDef}{\arabic{customDef}}
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \begin{document}
-\title{Math 115 - Midterm 1+2 Definitions}
+\title{Math 115 Definitions}
 \author{}
 \date{}
 \maketitle
@@ -69,6 +69,7 @@
     If the test is inconclusive, then $m$ is composite. $m$ is a strong pseudoprime to the base $a$ if the test with $m$ is conclusive but $m$ is both odd and composite. 
     \item A Carmichael number is a composite number $m$ which is a weak pseudoprime to the base $a$ for all integers $a$ coprime to $m$. 
     \item $p^\alpha$ exactly divides $n$ (denote: $p^\alpha \mid\mid n$) if $p^\alpha \mid n$ but $p^{\alpha + 1} \nmid n$. \\
+    % the following 3 lines represent a horizontal bar 
     \begin{center}
         \hrule
     \end{center}
@@ -122,6 +123,40 @@
     \item \textbf{$M$ takes $f$ to $g$. } A matrix $M \in \Gamma$ takes $f$ to $g$ (where $f$ and $g$ are forms) if $f \circ T_M = g$. 
     \item \textbf{Equivalent Forms. } The forms $f$ and $g$ are equivalent if $\exists M \in \Gamma$ that takes $f$ to $g$. 
     \item \textbf{Reduced binary quadratic form. } Let $f(x,y) = ax^2 + bxy + cy^2$ be a form whose discriminant is not a perfect square. Then, $f$ is reduced if $-|a| < b \leq |a| < |c|$ or $0 \leq b \leq |a| = |c|$. 
+    \begin{center}
+        \hrule
+    \end{center}
+    \item \textbf{Class number of $d$. } Let $d \in \mathbb{Z}$, not a perfect square. Then the class number of $d$ is the number of equivalence classes of forms of discriminant $d$, excluding classes of negative definite forms (if $d<0$). The class number is denoted $H(d)$. 
+    \item \textbf{Automorph of $f$. } Let $f$ be a positive definite form. Then, an automorph of $f$ is a matrix $M \in \Gamma$ that takes $f$ to itself. 
+    \item \textbf{$w(f)$}. The number of automorphs of a positive definite form $f$ is written as $w(f)$. 
+    \item \textbf{Arithmetic Function. } An arithmetic function is a function $f: \mathbb{Z}_{>0} \to \mathbb{C}$. 
+    \item \textbf{Multiplicative Function. } A multiplicative function is a function (not the zero function) with $f(mn) = f(m)f(n)$ for all coprime $m,n \in \mathbb{Z}_{>0}$. 
+    \item \textbf{Totally Multiplicative Function. } A totally multiplicative function is an arithmetic function, not the zero function, $f(mn) = f(m)f(n)$ for all $m,n \in \mathbb{Z}_{>0}$. 
+    \item \textbf{$d(n), \sigma(n), \sigma_k(n), \omega(n), \Omega(n)$. } Let $n \in \mathbb{Z}_{>0}$. Then define: 
+    \begin{enumerate}
+        \item $d(n)$ to be the number of positive divisors of $n$. 
+        \item $\sigma(n)$ to be the sum of the positive divisors of $n$. 
+        \item $\sigma_k(n)$ to be the sum of the $k^{th}$ powers of the positive divisors of $n$. 
+        \item $\omega(n)$ to be the number of distinct primes dividing $n$. 
+        \item $\Omega(n)$ to be the number of primes dividing $n$, counting multiplicity. 
+    \end{enumerate}
+    \item \textbf{Möbius Function, $\mu$. } The Möbius function is the arithmetic function $\mu: \mathbb{Z}_{>0} \to \mathbb{Z}$ defined by $\mu(n) = (-1)^{\omega(n)}$ if $n$ is square-free and $\mu(n) = 0$ if otherwise. 
+    \item \textbf{Finite Continued Fraction. } A finite continued fraction is something of the form: 
+    $$
+    a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{\ddots + \frac{1}{a_n}}}}. 
+    $$
+    \item \textbf{Finite Simple Continued Fraction. } Let $\langle x_0,\dots,x_n \rangle$ be a finite continued fraction. It is a finite simple continued fraction if $x_0,\dots,x_n \in \mathbb{Z}$. 
+    \item \textbf{Infinite Simple Continued Fraction. } An infinite simple continued fractions is an expansion $\langle a_0,a_1,\dots \rangle$ with $a_i \in \mathbb{Z}$ for all $i \geq 0$ and $a_i > 0$ for all $i > 0$. 
+    \item \textbf{Value of an Infinite Simple Continued Fraction. } The value of an infinite simple continued fraction is $\lim_{n \to \infty} \langle a_0,\dots,a_n \rangle$. 
+    \item \textbf{$n^{th}$ convergent of infinite simple continued fraction. } This is defined to be $r_n = \langle a_0,\dots,a_n \rangle = \frac{h_n}{k_n}$. 
+    \item \textbf{Fractional Part $\{x\}$ of $x \in \mathbb{R}$. } Let $x \in \mathbb{R}$. The fractional part of $x$ is defined to be $x - \{x\}$, where $\{\}$ is the greatest-integer function. 
+    \item \textbf{Distance $||x||$ from $x \in \mathbb{R}$ to the nearest integer. } Let $x \in \mathbb{R}$. Then, this quantity is defined to be $||x|| = \min \{\{-x\}, \{x\}\} \in [0,\frac{1}{2}]$. 
+    \item \textbf{Periodic Continued Fraction. } An infinite simple continued fraction $\langle a_0,a_1,\dots \rangle$ is periodic if there is an integer $n>0$ such that $a_{r+n} = a_r$ for all sufficiently large $r$. 
+    \item \textbf{Purely Periodic Continued Fraction. } An infinite simple continued fraction $\langle a_0,a_1,\dots \rangle$ is purely periodic if $a_{r+n} = a_r$ for all $r \geq 0$. 
+    \item \textbf{Quadratic Irrational. } A quadratic irrational is a real number which is irrational which is a zero of a quadratic polynomial (nonzero) with integer coefficients. 
+    \item \textbf{Conjugate of Quadratic Irrational. } Let $d \in \mathbb{Z}$, not a perfect square. THen, the conjugate of a quadratic irrational $r + s\sqrt{d}$ (with $r,s \in \mathbb{Q}$) is $r - s\sqrt{d}$. 
+    \item \textbf{Pell's Equation. } This is the equation $x^2 - dy^2 = N$, where $d,N \in \mathbb{Z}$ and we are looking for solutions in integers $x,y$. 
+    \item \textbf{Positive Solution of Pell's Equation. } A positive solution of Pell's equation is one where $x>0$ and $y>0$. 
 \end{enumerate}
 
 
